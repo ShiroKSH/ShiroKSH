@@ -1,18 +1,19 @@
 <h1 align="center">Kushida / ShiroKSH</h1>
 
 <p align="center">
-  <i>bug hunting, runtime edge cases, security papercuts, and PRs that make consoles quieter</i>
+  <i>bugs, edge cases, OSS PRs, suspicious console logs</i>
 </p>
 
 <p align="center">
-  <code>bug hunter</code>
-  <code>runtime janitor</code>
-  <code>security papercuts</code>
-  <code>GLua / TS / Rust / Go</code>
+  <code>GLua</code>
+  <code>TypeScript</code>
+  <code>Rust</code>
+  <code>Go</code>
+  <code>Lua</code>
 </p>
 
 <p align="center">
-  fixing the weird stuff before it becomes someone else's stack trace
+  small fixes, weird crashes, public PR receipts
 </p>
 
 ---
@@ -31,12 +32,26 @@
 <sub>Auto-parsed from GitHub Search. Last updated 2026-07-08.</sub>
 <!-- PR-STATS:END -->
 
-## I usually touch
+## Top languages
 
-- GMod, GLua, Helix, DarkRP, Source engine-adjacent code.
-- TypeScript, Rust, Go, PHP, Lua, Tauri, desktop app plumbing.
-- Crash fixes, stale state guards, path/input validation, unsafe IPC boundaries.
-- Small PRs that remove sharp edges without changing normal behavior.
+<!-- LANG-STATS:START -->
+| language | share |
+| --- | --- |
+| JavaScript | `#####-----` 46.9% |
+| TypeScript | `###-------` 28.0% |
+| Lua | `##--------` 17.4% |
+| Python | `#---------` 5.5% |
+| C++ | `#---------` 2.1% |
+
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-08.</sub>
+<!-- LANG-STATS:END -->
+
+## Field notes
+
+- GLua/GMod bugs, odd entity state, net payloads, stale references.
+- App edges: IPC, auth drift, file paths, platform-specific breakage.
+- OSS drive-by fixes: small diffs, real crashes gone.
+- Current lane: bug PRs, stability patches, security footguns.
 
 <p align="center">
   <b>current status:</b> probably fixing the thing that only breaks on someone else's machine
