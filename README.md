@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Merged public PRs | **11** |
-| Open public PRs | **27** |
+| Merged public PRs | **12** |
+| Open public PRs | **37** |
 | Biggest repo with my merged PR | [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) - 15k stars |
 | Best star-target PR | [Fix salary tool edge cases](https://github.com/MadsLorentzen/ai-job-search/pull/75) |
-| Latest merged PR | [Fix salary tool edge cases](https://github.com/MadsLorentzen/ai-job-search/pull/75) - 2026-07-08 |
+| Latest merged PR | [Fix MCP metadata forwarding and workspace config](https://github.com/777genius/agent-teams-ai/pull/244) - 2026-07-08 |
 
 <sub>Auto-parsed from GitHub Search. Last updated 2026-07-08.</sub>
 <!-- PR-STATS:END -->
@@ -37,8 +37,8 @@
 <!-- LANG-STATS:START -->
 | language | share |
 | --- | --- |
-| JavaScript | `#####-----` 46.9% |
-| TypeScript | `###-------` 28.0% |
+| JavaScript | `#####-----` 47.2% |
+| TypeScript | `###-------` 27.9% |
 | Lua | `##--------` 17.4% |
 | Python | `#---------` 5.5% |
 | C++ | `#---------` 2.1% |
