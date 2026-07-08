@@ -3,8 +3,11 @@ import { readFile, writeFile } from "node:fs/promises";
 const username = process.env.GITHUB_USERNAME || "ShiroKSH";
 const token = process.env.PROFILE_STATS_TOKEN || process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
 const readmePath = new URL("../README.md", import.meta.url);
-const markerStart = "<!-- PR-STATS:START -->";
-const markerEnd = "<!-- PR-STATS:END -->";
+const prMarkerStart = "<!-- PR-STATS:START -->";
+const prMarkerEnd = "<!-- PR-STATS:END -->";
+const langMarkerStart = "<!-- LANG-STATS:START -->";
+const langMarkerEnd = "<!-- LANG-STATS:END -->";
+const ignoredLanguages = new Set(["CMake", "CSS", "HTML", "PowerShell", "Shell"]);
 
 async function githubJson(url, authToken = token) {
   const headers = {
@@ -85,6 +88,47 @@ async function hydrateRepositories(nodes) {
   return nodes;
 }
 
+async function listOwnedRepositories(maxPages = 5) {
+  const repositories = [];
+
+  for (let page = 1; page <= maxPages; page += 1) {
+    const params = new URLSearchParams({
+      type: "owner",
+      sort: "updated",
+      per_page: "100",
+      page: String(page),
+    });
+    const pageItems = await githubJson(`https://api.github.com/users/${username}/repos?${params}`);
+    repositories.push(...pageItems.filter((repo) => !repo.fork && !repo.archived));
+
+    if (pageItems.length < 100) {
+      break;
+    }
+  }
+
+  return repositories;
+}
+
+async function getLanguageTotals() {
+  const repositories = await listOwnedRepositories();
+  const totals = new Map();
+
+  for (const repo of repositories) {
+    const languages = await githubJson(repo.languages_url);
+    for (const [language, bytes] of Object.entries(languages)) {
+      if (ignoredLanguages.has(language)) {
+        continue;
+      }
+
+      totals.set(language, (totals.get(language) || 0) + bytes);
+    }
+  }
+
+  return [...totals.entries()]
+    .map(([language, bytes]) => ({ language, bytes }))
+    .sort((left, right) => right.bytes - left.bytes);
+}
+
 function formatNumber(value) {
   return new Intl.NumberFormat("en-US").format(value);
 }
@@ -103,6 +147,11 @@ function formatDate(value) {
 
 function escapeMarkdown(value) {
   return value.replaceAll("|", "\\|").replaceAll("\n", " ");
+}
+
+function progressBar(percent) {
+  const filled = Math.max(1, Math.round(percent / 10));
+  return "#".repeat(filled) + "-".repeat(10 - filled);
 }
 
 function renderStats({ merged, open }) {
@@ -145,19 +194,51 @@ function renderStats({ merged, open }) {
   return lines.join("\n");
 }
 
+function renderLanguages(languages) {
+  const topLanguages = languages.slice(0, 6);
+  const totalBytes = topLanguages.reduce((sum, item) => sum + item.bytes, 0);
+
+  if (!topLanguages.length || totalBytes === 0) {
+    return "No public repository language data yet.";
+  }
+
+  return [
+    `| language | share |`,
+    `| --- | --- |`,
+    ...topLanguages.map((item) => {
+      const percent = (item.bytes / totalBytes) * 100;
+      return `| ${escapeMarkdown(item.language)} | \`${progressBar(percent)}\` ${percent.toFixed(1)}% |`;
+    }),
+    "",
+    `<sub>Auto-parsed from owned public repositories. Last updated ${new Date().toISOString().slice(0, 10)}.</sub>`,
+  ].join("\n");
+}
+
 const [merged, open] = await Promise.all([
   searchPullRequests(`author:${username} is:pr is:merged is:public`),
   searchPullRequests(`author:${username} is:pr is:open is:public`),
 ]);
 
 await hydrateRepositories(merged.nodes);
+const languages = await getLanguageTotals();
 
 const readme = await readFile(readmePath, "utf8");
-const generated = renderStats({ merged, open });
-const pattern = new RegExp(`${markerStart}[\\s\\S]*?${markerEnd}`);
+const generatedPrStats = renderStats({ merged, open });
+const generatedLangStats = renderLanguages(languages);
+const prPattern = new RegExp(`${prMarkerStart}[\\s\\S]*?${prMarkerEnd}`);
+const langPattern = new RegExp(`${langMarkerStart}[\\s\\S]*?${langMarkerEnd}`);
 
-if (!pattern.test(readme)) {
+if (!prPattern.test(readme)) {
   throw new Error("README is missing PR stats markers.");
 }
 
-await writeFile(readmePath, readme.replace(pattern, `${markerStart}\n${generated}\n${markerEnd}`));
+if (!langPattern.test(readme)) {
+  throw new Error("README is missing language stats markers.");
+}
+
+await writeFile(
+  readmePath,
+  readme
+    .replace(prPattern, `${prMarkerStart}\n${generatedPrStats}\n${prMarkerEnd}`)
+    .replace(langPattern, `${langMarkerStart}\n${generatedLangStats}\n${langMarkerEnd}`),
+);
