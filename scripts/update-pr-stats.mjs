@@ -55,6 +55,7 @@ async function searchPullRequests(searchQuery, maxPages = 10) {
       url: item.html_url,
       mergedAt: item.closed_at,
       createdAt: item.created_at,
+      prApiUrl: item.pull_request?.url,
       repositoryApiUrl: item.repository_url,
     })));
 
@@ -65,6 +66,26 @@ async function searchPullRequests(searchQuery, maxPages = 10) {
 
   const uniqueNodes = [...new Map(nodes.map((node) => [node.url, node])).values()];
   return { count: uniqueNodes.length, nodes: uniqueNodes };
+}
+
+async function hydratePullRequests(nodes) {
+  for (const node of nodes) {
+    if (!node.prApiUrl) {
+      continue;
+    }
+
+    const pullRequest = await githubJson(node.prApiUrl);
+    node.title = pullRequest.title || node.title;
+    node.url = pullRequest.html_url || node.url;
+    node.mergedAt = pullRequest.merged_at || node.mergedAt;
+    node.createdAt = pullRequest.created_at || node.createdAt;
+    node.repositoryApiUrl = pullRequest.base?.repo?.url || node.repositoryApiUrl;
+    node.headRefName = pullRequest.head?.ref || null;
+    node.headRepositoryName = pullRequest.head?.repo?.full_name || null;
+    node.headRepositoryPrivate = pullRequest.head?.repo?.private ?? null;
+  }
+
+  return nodes;
 }
 
 async function hydrateRepositories(nodes) {
@@ -84,6 +105,39 @@ async function hydrateRepositories(nodes) {
   }
 
   return nodes;
+}
+
+function pullRequestBranchKey(node) {
+  if (node.headRepositoryName && node.headRefName && node.headRepositoryPrivate === false) {
+    return `branch:${node.headRepositoryName}:${node.headRefName}`;
+  }
+
+  return `pr:${node.url}`;
+}
+
+function betterPullRequestRepresentative(left, right) {
+  const leftStars = left.repository?.stargazerCount || 0;
+  const rightStars = right.repository?.stargazerCount || 0;
+
+  if (rightStars !== leftStars) {
+    return rightStars > leftStars ? right : left;
+  }
+
+  const leftTime = new Date(left.mergedAt || left.createdAt || 0).getTime();
+  const rightTime = new Date(right.mergedAt || right.createdAt || 0).getTime();
+  return rightTime > leftTime ? right : left;
+}
+
+function dedupePullRequestsByBranch(nodes) {
+  const uniqueNodes = new Map();
+
+  for (const node of nodes) {
+    const key = pullRequestBranchKey(node);
+    const current = uniqueNodes.get(key);
+    uniqueNodes.set(key, current ? betterPullRequestRepresentative(current, node) : node);
+  }
+
+  return [...uniqueNodes.values()];
 }
 
 async function listOwnedRepositories(maxPages = 5) {
@@ -171,8 +225,8 @@ function renderStats({ merged, open }) {
   const lines = [
     `| signal | value |`,
     `| --- | --- |`,
-    `| Unique merged public PRs | **${formatNumber(merged.count)}** |`,
-    `| Unique open public PRs | **${formatNumber(open.count)}** |`,
+    `| Unique merged public PR branches | **${formatNumber(merged.count)}** |`,
+    `| Unique open public PR branches | **${formatNumber(open.count)}** |`,
   ];
 
   if (bestByStars) {
@@ -188,7 +242,7 @@ function renderStats({ merged, open }) {
     );
   }
 
-  lines.push("", `<sub>Auto-parsed from GitHub Search. Last updated ${new Date().toISOString().slice(0, 10)}.</sub>`);
+  lines.push("", `<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated ${new Date().toISOString().slice(0, 10)}.</sub>`);
   return lines.join("\n");
 }
 
@@ -217,7 +271,13 @@ const [merged, open] = await Promise.all([
   searchPullRequests(`author:${username} is:pr is:open is:public`),
 ]);
 
-await hydrateRepositories(merged.nodes);
+await hydratePullRequests(merged.nodes);
+await hydratePullRequests(open.nodes);
+await hydrateRepositories([...merged.nodes, ...open.nodes]);
+merged.nodes = dedupePullRequestsByBranch(merged.nodes);
+open.nodes = dedupePullRequestsByBranch(open.nodes);
+merged.count = merged.nodes.length;
+open.count = open.nodes.length;
 const languages = await getLanguageTotals();
 
 const readme = await readFile(readmePath, "utf8");
