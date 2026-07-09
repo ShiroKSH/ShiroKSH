@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Merged public PRs | **13** |
-| Open public PRs | **37** |
-| Biggest repo with my merged PR | [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) - 16k stars |
+| Unique merged public PRs | **14** |
+| Unique open public PRs | **33** |
+| Biggest repo with my merged PR | [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) - 18k stars |
 | Best star-target PR | [Fix salary tool edge cases](https://github.com/MadsLorentzen/ai-job-search/pull/75) |
-| Latest merged PR | [fix: avoid UDP receive timeout](https://github.com/wisp-gg/go-gamequery/pull/2) - 2026-07-08 |
+| Latest merged PR | [fix: harden team storage and project paths](https://github.com/777genius/agent-teams-ai/pull/245) - 2026-07-09 |
 
 <sub>Auto-parsed from GitHub Search. Last updated 2026-07-09.</sub>
 <!-- PR-STATS:END -->
@@ -37,10 +37,10 @@
 <!-- LANG-STATS:START -->
 | language | share |
 | --- | --- |
-| JavaScript | `#####-----` 47.2% |
-| TypeScript | `###-------` 27.9% |
-| Lua | `##--------` 17.4% |
-| Python | `#---------` 5.5% |
+| JavaScript | `#####-----` 46.5% |
+| TypeScript | `###-------` 28.3% |
+| Lua | `##--------` 17.6% |
+| Python | `#---------` 5.6% |
 | C++ | `#---------` 2.1% |
 
 <sub>Auto-parsed from owned public repositories. Last updated 2026-07-09.</sub>
