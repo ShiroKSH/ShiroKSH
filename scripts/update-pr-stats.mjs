@@ -41,7 +41,6 @@ async function githubJson(url, authToken = token) {
 
 async function searchPullRequests(searchQuery, maxPages = 10) {
   const nodes = [];
-  let totalCount = 0;
 
   for (let page = 1; page <= maxPages; page += 1) {
     const params = new URLSearchParams({
@@ -50,7 +49,6 @@ async function searchPullRequests(searchQuery, maxPages = 10) {
       page: String(page),
     });
     const result = await githubJson(`https://api.github.com/search/issues?${params}`);
-    totalCount = result.total_count;
 
     nodes.push(...result.items.map((item) => ({
       title: item.title,
@@ -66,7 +64,7 @@ async function searchPullRequests(searchQuery, maxPages = 10) {
   }
 
   const uniqueNodes = [...new Map(nodes.map((node) => [node.url, node])).values()];
-  return { count: totalCount, nodes: uniqueNodes };
+  return { count: uniqueNodes.length, nodes: uniqueNodes };
 }
 
 async function hydrateRepositories(nodes) {
@@ -173,8 +171,8 @@ function renderStats({ merged, open }) {
   const lines = [
     `| signal | value |`,
     `| --- | --- |`,
-    `| Merged public PRs | **${formatNumber(merged.count)}** |`,
-    `| Open public PRs | **${formatNumber(open.count)}** |`,
+    `| Unique merged public PRs | **${formatNumber(merged.count)}** |`,
+    `| Unique open public PRs | **${formatNumber(open.count)}** |`,
   ];
 
   if (bestByStars) {
