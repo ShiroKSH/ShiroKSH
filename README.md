@@ -23,13 +23,13 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Unique merged public PR branches | **13** |
-| Unique open public PR branches | **33** |
-| Biggest repo with my merged PR | [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) - 18k stars |
-| Best star-target PR | [Fix salary tool edge cases](https://github.com/MadsLorentzen/ai-job-search/pull/75) |
-| Latest merged PR | [fix: harden team storage and project paths](https://github.com/777genius/agent-teams-ai/pull/245) - 2026-07-09 |
+| Unique merged public PR branches | **22** |
+| Unique open public PR branches | **40** |
+| Biggest repo with my merged PR | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) - 76k stars |
+| Best star-target PR | [fix: harden eval and command validation](https://github.com/addyosmani/agent-skills/pull/372) |
+| Latest merged PR | [Fix Windows install and review edge cases](https://github.com/backnotprop/plannotator/pull/1021) - 2026-07-10 |
 
-<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-09.</sub>
+<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-10.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -37,13 +37,13 @@
 <!-- LANG-STATS:START -->
 | language | share |
 | --- | --- |
-| JavaScript | `#####-----` 47.2% |
-| TypeScript | `###-------` 27.9% |
-| Lua | `##--------` 17.4% |
+| JavaScript | `#####-----` 47.4% |
+| TypeScript | `###-------` 27.8% |
+| Lua | `##--------` 17.3% |
 | Python | `#---------` 5.5% |
 | C++ | `#---------` 2.1% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-09.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-10.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
