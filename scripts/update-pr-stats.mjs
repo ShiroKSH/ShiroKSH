@@ -1,40 +1,169 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const username = process.env.GITHUB_USERNAME || "ShiroKSH";
-const token = process.env.PROFILE_STATS_TOKEN || process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+const profileStatsToken = process.env.PROFILE_STATS_TOKEN || process.env.GH_TOKEN;
+const token = profileStatsToken || process.env.GITHUB_TOKEN;
 const readmePath = new URL("../README.md", import.meta.url);
+const cachePath = new URL("../.github/profile-pr-cache.json", import.meta.url);
 const prMarkerStart = "<!-- PR-STATS:START -->";
 const prMarkerEnd = "<!-- PR-STATS:END -->";
 const langMarkerStart = "<!-- LANG-STATS:START -->";
 const langMarkerEnd = "<!-- LANG-STATS:END -->";
 const ignoredLanguages = new Set(["CMake", "CSS", "HTML", "PowerShell", "Shell"]);
 
-async function githubGraphql(query, variables = {}) {
-  if (!token) {
-    throw new Error("Set PROFILE_STATS_TOKEN, GH_TOKEN, or GITHUB_TOKEN before running this script.");
+async function requestJson(url, { authToken, body, method = "GET" } = {}) {
+  const headers = {
+    accept: "application/vnd.github+json",
+    "user-agent": `${username}-profile-readme`,
+  };
+
+  if (authToken) {
+    headers.authorization = `Bearer ${authToken}`;
   }
 
-  const response = await fetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${token}`,
-      "content-type": "application/json",
-      "user-agent": `${username}-profile-readme`,
-    },
-    body: JSON.stringify({ query, variables }),
+  if (body) {
+    headers["content-type"] = "application/json";
+  }
+
+  const response = await fetch(url, {
+    method,
+    headers,
+    body: body ? JSON.stringify(body) : undefined,
   });
 
   const payload = await response.json();
 
-  if (!response.ok || payload.errors?.length) {
+  if (!response.ok) {
     const detail = payload.errors?.map((error) => error.message).join("; ") || payload.message || response.statusText;
+    throw new Error(`GitHub API failed: ${detail}`);
+  }
+
+  return payload;
+}
+
+async function githubGraphql(query, variables = {}, authToken = token) {
+  if (!authToken) {
+    throw new Error("Set PROFILE_STATS_TOKEN, GH_TOKEN, or GITHUB_TOKEN before running this script.");
+  }
+
+  const payload = await requestJson("https://api.github.com/graphql", {
+    method: "POST",
+    authToken,
+    body: { query, variables },
+  });
+
+  if (payload.errors?.length) {
+    const detail = payload.errors.map((error) => error.message).join("; ");
     throw new Error(`GitHub GraphQL failed: ${detail}`);
   }
 
   return payload.data;
 }
 
-async function searchPullRequests(searchQuery, maxPages = 10) {
+async function readPullRequestCache() {
+  try {
+    const raw = await readFile(cachePath, "utf8");
+    const parsed = JSON.parse(raw);
+    return new Map(Object.entries(parsed.pullRequests || {}));
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return new Map();
+    }
+
+    throw error;
+  }
+}
+
+const pullRequestCache = await readPullRequestCache();
+
+function cacheNode(node) {
+  return {
+    title: node.title,
+    url: node.url,
+    mergedAt: node.mergedAt,
+    createdAt: node.createdAt,
+    baseRepositoryPrivate: node.baseRepositoryPrivate,
+    headRefName: node.headRefName,
+    headRepositoryName: node.headRepositoryName,
+    headRepositoryPrivate: node.headRepositoryPrivate,
+    repository: node.repository,
+  };
+}
+
+async function writePullRequestCache(nodes) {
+  if (process.env.UPDATE_PR_CACHE !== "1") {
+    return;
+  }
+
+  const pullRequests = Object.fromEntries([...pullRequestCache.entries()].sort(([left], [right]) => left.localeCompare(right)));
+
+  for (const node of nodes) {
+    pullRequests[node.url] = cacheNode(node);
+  }
+
+  await mkdir(new URL("../.github/", import.meta.url), { recursive: true });
+  await writeFile(cachePath, `${JSON.stringify({
+    version: 1,
+    updatedAt: new Date().toISOString(),
+    pullRequests,
+  }, null, 2)}\n`);
+}
+
+function nodeFromRestPullRequest(pullRequest) {
+  return {
+    title: pullRequest.title,
+    url: pullRequest.html_url,
+    mergedAt: pullRequest.merged_at,
+    createdAt: pullRequest.created_at,
+    baseRepositoryPrivate: pullRequest.base?.repo?.private ?? null,
+    headRefName: pullRequest.head?.ref || null,
+    headRepositoryName: pullRequest.head?.repo?.full_name || null,
+    headRepositoryPrivate: pullRequest.head?.repo?.private ?? null,
+    repository: {
+      nameWithOwner: pullRequest.base?.repo?.full_name,
+      url: pullRequest.base?.repo?.html_url,
+      stargazerCount: pullRequest.base?.repo?.stargazers_count || 0,
+    },
+  };
+}
+
+async function searchPullRequestsRest(searchQuery, maxPages = 10) {
+  const nodes = [];
+
+  for (let page = 1; page <= maxPages; page += 1) {
+    const params = new URLSearchParams({
+      q: searchQuery,
+      per_page: "100",
+      page: String(page),
+    });
+    const result = await requestJson(`https://api.github.com/search/issues?${params}`);
+
+    for (const item of result.items) {
+      const cached = pullRequestCache.get(item.html_url);
+
+      if (cached) {
+        nodes.push({
+          ...cached,
+          title: item.title || cached.title,
+          url: item.html_url,
+          createdAt: item.created_at || cached.createdAt,
+        });
+        continue;
+      }
+
+      nodes.push(nodeFromRestPullRequest(await requestJson(item.pull_request.url)));
+    }
+
+    if (result.items.length < 100) {
+      break;
+    }
+  }
+
+  const uniqueNodes = [...new Map(nodes.map((node) => [node.url, node])).values()];
+  return { count: uniqueNodes.length, nodes: uniqueNodes };
+}
+
+async function searchPullRequestsGraphql(searchQuery, maxPages = 10) {
   const query = `
     query SearchPullRequests($query: String!, $cursor: String) {
       search(query: $query, type: ISSUE, first: 100, after: $cursor) {
@@ -75,7 +204,7 @@ async function searchPullRequests(searchQuery, maxPages = 10) {
   let cursor = null;
 
   for (let page = 0; page < maxPages; page += 1) {
-    const result = await githubGraphql(query, { query: searchQuery, cursor });
+    const result = await githubGraphql(query, { query: searchQuery, cursor }, profileStatsToken || token);
     const search = result.search;
 
     nodes.push(...search.nodes.filter(Boolean).map((node) => ({
@@ -103,6 +232,16 @@ async function searchPullRequests(searchQuery, maxPages = 10) {
 
   const uniqueNodes = [...new Map(nodes.map((node) => [node.url, node])).values()];
   return { count: uniqueNodes.length, nodes: uniqueNodes };
+}
+
+async function searchPullRequests(searchQuery) {
+  if (!profileStatsToken && process.env.GITHUB_ACTIONS === "true") {
+    const wantsMerged = searchQuery.includes("is:merged");
+    const nodes = [...pullRequestCache.values()].filter((node) => wantsMerged ? Boolean(node.mergedAt) : !node.mergedAt);
+    return { count: nodes.length, nodes };
+  }
+
+  return searchPullRequestsGraphql(searchQuery);
 }
 
 function pullRequestBranchKey(node) {
@@ -138,7 +277,7 @@ function dedupePullRequestsByBranch(nodes) {
   return [...uniqueNodes.values()];
 }
 
-async function listOwnedRepositories(maxPages = 5) {
+async function getLanguageTotals(maxPages = 5) {
   const query = `
     query UserRepositories($login: String!, $cursor: String) {
       user(login: $login) {
@@ -170,39 +309,30 @@ async function listOwnedRepositories(maxPages = 5) {
     }
   `;
 
-  const repositories = [];
+  const totals = new Map();
   let cursor = null;
 
   for (let page = 0; page < maxPages; page += 1) {
     const result = await githubGraphql(query, { login: username, cursor });
-    const pageItems = result.user.repositories;
-    repositories.push(...pageItems.nodes.filter((repo) => !repo.isArchived && !repo.isPrivate));
+    const repositories = result.user.repositories;
 
-    if (!pageItems.pageInfo.hasNextPage) {
+    for (const repo of repositories.nodes.filter((item) => !item.isArchived && !item.isPrivate)) {
+      for (const edge of repo.languages.edges) {
+        const language = edge.node.name;
+
+        if (ignoredLanguages.has(language)) {
+          continue;
+        }
+
+        totals.set(language, (totals.get(language) || 0) + edge.size);
+      }
+    }
+
+    if (!repositories.pageInfo.hasNextPage) {
       break;
     }
 
-    cursor = pageItems.pageInfo.endCursor;
-  }
-
-  return repositories;
-}
-
-async function getLanguageTotals() {
-  const repositories = await listOwnedRepositories();
-  const totals = new Map();
-
-  for (const repo of repositories) {
-    for (const edge of repo.languages.edges) {
-      const language = edge.node.name;
-      const bytes = edge.size;
-
-      if (ignoredLanguages.has(language)) {
-        continue;
-      }
-
-      totals.set(language, (totals.get(language) || 0) + bytes);
-    }
+    cursor = repositories.pageInfo.endCursor;
   }
 
   return [...totals.entries()]
@@ -306,7 +436,9 @@ merged.nodes = dedupePullRequestsByBranch(merged.nodes);
 open.nodes = dedupePullRequestsByBranch(open.nodes);
 merged.count = merged.nodes.length;
 open.count = open.nodes.length;
+
 const languages = await getLanguageTotals();
+await writePullRequestCache([...merged.nodes, ...open.nodes]);
 
 const readme = await readFile(readmePath, "utf8");
 const generatedPrStats = renderStats({ merged, open });
