@@ -37,11 +37,11 @@
 <!-- LANG-STATS:START -->
 | language | share |
 | --- | --- |
-| JavaScript | `#####-----` 47.4% |
-| TypeScript | `###-------` 27.8% |
-| Lua | `##--------` 17.3% |
-| Python | `#---------` 5.5% |
-| C++ | `#---------` 2.1% |
+| JavaScript | `#####-----` 47.7% |
+| TypeScript | `###-------` 27.6% |
+| Lua | `##--------` 17.2% |
+| Python | `#---------` 5.4% |
+| C++ | `#---------` 2.0% |
 
 <sub>Auto-parsed from owned public repositories. Last updated 2026-07-10.</sub>
 <!-- LANG-STATS:END -->
