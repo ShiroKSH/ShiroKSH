@@ -80,6 +80,7 @@ async function hydratePullRequests(nodes) {
     node.mergedAt = pullRequest.merged_at || node.mergedAt;
     node.createdAt = pullRequest.created_at || node.createdAt;
     node.repositoryApiUrl = pullRequest.base?.repo?.url || node.repositoryApiUrl;
+    node.baseRepositoryPrivate = pullRequest.base?.repo?.private ?? null;
     node.headRefName = pullRequest.head?.ref || null;
     node.headRepositoryName = pullRequest.head?.repo?.full_name || null;
     node.headRepositoryPrivate = pullRequest.head?.repo?.private ?? null;
@@ -267,12 +268,14 @@ function renderLanguages(languages) {
 }
 
 const [merged, open] = await Promise.all([
-  searchPullRequests(`author:${username} is:pr is:merged is:public`),
-  searchPullRequests(`author:${username} is:pr is:open is:public`),
+  searchPullRequests(`author:${username} is:pr is:merged`),
+  searchPullRequests(`author:${username} is:pr is:open`),
 ]);
 
 await hydratePullRequests(merged.nodes);
 await hydratePullRequests(open.nodes);
+merged.nodes = merged.nodes.filter((node) => node.baseRepositoryPrivate === false);
+open.nodes = open.nodes.filter((node) => node.baseRepositoryPrivate === false);
 await hydrateRepositories([...merged.nodes, ...open.nodes]);
 merged.nodes = dedupePullRequestsByBranch(merged.nodes);
 open.nodes = dedupePullRequestsByBranch(open.nodes);
