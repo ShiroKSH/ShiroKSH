@@ -9,103 +9,100 @@ const langMarkerStart = "<!-- LANG-STATS:START -->";
 const langMarkerEnd = "<!-- LANG-STATS:END -->";
 const ignoredLanguages = new Set(["CMake", "CSS", "HTML", "PowerShell", "Shell"]);
 
-async function githubJson(url, authToken = token) {
-  const headers = {
-    accept: "application/vnd.github+json",
-    "user-agent": `${username}-profile-readme`,
-    "x-github-api-version": "2022-11-28",
-  };
-
-  if (authToken) {
-    headers.authorization = `Bearer ${authToken}`;
+async function githubGraphql(query, variables = {}) {
+  if (!token) {
+    throw new Error("Set PROFILE_STATS_TOKEN, GH_TOKEN, or GITHUB_TOKEN before running this script.");
   }
 
-  const response = await fetch(url, {
+  const response = await fetch("https://api.github.com/graphql", {
+    method: "POST",
     headers: {
-      ...headers,
+      authorization: `Bearer ${token}`,
+      "content-type": "application/json",
+      "user-agent": `${username}-profile-readme`,
     },
+    body: JSON.stringify({ query, variables }),
   });
 
   const payload = await response.json();
 
-  if ((response.status === 401 || response.status === 403) && authToken) {
-    return githubJson(url, null);
+  if (!response.ok || payload.errors?.length) {
+    const detail = payload.errors?.map((error) => error.message).join("; ") || payload.message || response.statusText;
+    throw new Error(`GitHub GraphQL failed: ${detail}`);
   }
 
-  if (!response.ok) {
-    throw new Error(`GitHub API failed: ${payload.message || response.statusText}`);
-  }
-
-  return payload;
+  return payload.data;
 }
 
 async function searchPullRequests(searchQuery, maxPages = 10) {
+  const query = `
+    query SearchPullRequests($query: String!, $cursor: String) {
+      search(query: $query, type: ISSUE, first: 100, after: $cursor) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          ... on PullRequest {
+            title
+            url
+            mergedAt
+            createdAt
+            headRefName
+            headRepository {
+              nameWithOwner
+              isPrivate
+            }
+            baseRepository {
+              nameWithOwner
+              url
+              stargazerCount
+              isPrivate
+            }
+            repository {
+              nameWithOwner
+              url
+              stargazerCount
+              isPrivate
+            }
+          }
+        }
+      }
+    }
+  `;
+
   const nodes = [];
+  let cursor = null;
 
-  for (let page = 1; page <= maxPages; page += 1) {
-    const params = new URLSearchParams({
-      q: searchQuery,
-      per_page: "100",
-      page: String(page),
-    });
-    const result = await githubJson(`https://api.github.com/search/issues?${params}`);
+  for (let page = 0; page < maxPages; page += 1) {
+    const result = await githubGraphql(query, { query: searchQuery, cursor });
+    const search = result.search;
 
-    nodes.push(...result.items.map((item) => ({
-      title: item.title,
-      url: item.html_url,
-      mergedAt: item.closed_at,
-      createdAt: item.created_at,
-      prApiUrl: item.pull_request?.url,
-      repositoryApiUrl: item.repository_url,
+    nodes.push(...search.nodes.filter(Boolean).map((node) => ({
+      title: node.title,
+      url: node.url,
+      mergedAt: node.mergedAt,
+      createdAt: node.createdAt,
+      baseRepositoryPrivate: node.baseRepository?.isPrivate ?? node.repository?.isPrivate ?? null,
+      headRefName: node.headRefName || null,
+      headRepositoryName: node.headRepository?.nameWithOwner || null,
+      headRepositoryPrivate: node.headRepository?.isPrivate ?? null,
+      repository: {
+        nameWithOwner: node.repository?.nameWithOwner || node.baseRepository?.nameWithOwner,
+        url: node.repository?.url || node.baseRepository?.url,
+        stargazerCount: node.repository?.stargazerCount ?? node.baseRepository?.stargazerCount ?? 0,
+      },
     })));
 
-    if (result.items.length < 100) {
+    if (!search.pageInfo.hasNextPage) {
       break;
     }
+
+    cursor = search.pageInfo.endCursor;
   }
 
   const uniqueNodes = [...new Map(nodes.map((node) => [node.url, node])).values()];
   return { count: uniqueNodes.length, nodes: uniqueNodes };
-}
-
-async function hydratePullRequests(nodes) {
-  for (const node of nodes) {
-    if (!node.prApiUrl) {
-      continue;
-    }
-
-    const pullRequest = await githubJson(node.prApiUrl);
-    node.title = pullRequest.title || node.title;
-    node.url = pullRequest.html_url || node.url;
-    node.mergedAt = pullRequest.merged_at || node.mergedAt;
-    node.createdAt = pullRequest.created_at || node.createdAt;
-    node.repositoryApiUrl = pullRequest.base?.repo?.url || node.repositoryApiUrl;
-    node.baseRepositoryPrivate = pullRequest.base?.repo?.private ?? null;
-    node.headRefName = pullRequest.head?.ref || null;
-    node.headRepositoryName = pullRequest.head?.repo?.full_name || null;
-    node.headRepositoryPrivate = pullRequest.head?.repo?.private ?? null;
-  }
-
-  return nodes;
-}
-
-async function hydrateRepositories(nodes) {
-  const repositories = new Map();
-
-  for (const node of nodes) {
-    if (!repositories.has(node.repositoryApiUrl)) {
-      const repo = await githubJson(node.repositoryApiUrl);
-      repositories.set(node.repositoryApiUrl, {
-        nameWithOwner: repo.full_name,
-        url: repo.html_url,
-        stargazerCount: repo.stargazers_count,
-      });
-    }
-
-    node.repository = repositories.get(node.repositoryApiUrl);
-  }
-
-  return nodes;
 }
 
 function pullRequestBranchKey(node) {
@@ -142,21 +139,50 @@ function dedupePullRequestsByBranch(nodes) {
 }
 
 async function listOwnedRepositories(maxPages = 5) {
+  const query = `
+    query UserRepositories($login: String!, $cursor: String) {
+      user(login: $login) {
+        repositories(
+          first: 100
+          after: $cursor
+          ownerAffiliations: OWNER
+          isFork: false
+          orderBy: { field: UPDATED_AT, direction: DESC }
+        ) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          nodes {
+            isArchived
+            isPrivate
+            languages(first: 20, orderBy: { field: SIZE, direction: DESC }) {
+              edges {
+                size
+                node {
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
   const repositories = [];
+  let cursor = null;
 
-  for (let page = 1; page <= maxPages; page += 1) {
-    const params = new URLSearchParams({
-      type: "owner",
-      sort: "updated",
-      per_page: "100",
-      page: String(page),
-    });
-    const pageItems = await githubJson(`https://api.github.com/users/${username}/repos?${params}`);
-    repositories.push(...pageItems.filter((repo) => !repo.fork && !repo.archived));
+  for (let page = 0; page < maxPages; page += 1) {
+    const result = await githubGraphql(query, { login: username, cursor });
+    const pageItems = result.user.repositories;
+    repositories.push(...pageItems.nodes.filter((repo) => !repo.isArchived && !repo.isPrivate));
 
-    if (pageItems.length < 100) {
+    if (!pageItems.pageInfo.hasNextPage) {
       break;
     }
+
+    cursor = pageItems.pageInfo.endCursor;
   }
 
   return repositories;
@@ -167,8 +193,10 @@ async function getLanguageTotals() {
   const totals = new Map();
 
   for (const repo of repositories) {
-    const languages = await githubJson(repo.languages_url);
-    for (const [language, bytes] of Object.entries(languages)) {
+    for (const edge of repo.languages.edges) {
+      const language = edge.node.name;
+      const bytes = edge.size;
+
       if (ignoredLanguages.has(language)) {
         continue;
       }
@@ -272,11 +300,8 @@ const [merged, open] = await Promise.all([
   searchPullRequests(`author:${username} is:pr is:open`),
 ]);
 
-await hydratePullRequests(merged.nodes);
-await hydratePullRequests(open.nodes);
 merged.nodes = merged.nodes.filter((node) => node.baseRepositoryPrivate === false);
 open.nodes = open.nodes.filter((node) => node.baseRepositoryPrivate === false);
-await hydrateRepositories([...merged.nodes, ...open.nodes]);
 merged.nodes = dedupePullRequestsByBranch(merged.nodes);
 open.nodes = dedupePullRequestsByBranch(open.nodes);
 merged.count = merged.nodes.length;
