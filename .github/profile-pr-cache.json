@@ -1,0 +1,936 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-10T13:11:32.603Z",
+  "pullRequests": {
+    "https://github.com/777genius/agent-teams-ai/pull/247": {
+      "title": "feat(codex): support GPT-5.6 fallback and runtime updates",
+      "url": "https://github.com/777genius/agent-teams-ai/pull/247",
+      "mergedAt": "2026-07-10T10:46:44Z",
+      "createdAt": "2026-07-09T20:16:06Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/controller-storage-hardening",
+      "headRepositoryName": "ShiroKSH/agent-teams-ai",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "777genius/agent-teams-ai",
+        "url": "https://github.com/777genius/agent-teams-ai",
+        "stargazerCount": 1564
+      }
+    },
+    "https://github.com/wiremod/wire/pull/3650": {
+      "title": "Passed review PR",
+      "url": "https://github.com/wiremod/wire/pull/3650",
+      "mergedAt": "2026-07-09T18:38:06Z",
+      "createdAt": "2026-07-09T17:30:42Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/passed-review-pr",
+      "headRepositoryName": "ShiroKSH/wire",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "wiremod/wire",
+        "url": "https://github.com/wiremod/wire",
+        "stargazerCount": 593
+      }
+    },
+    "https://github.com/addyosmani/agent-skills/pull/372": {
+      "title": "fix: harden eval and command validation",
+      "url": "https://github.com/addyosmani/agent-skills/pull/372",
+      "mergedAt": "2026-07-10T02:27:44Z",
+      "createdAt": "2026-07-09T15:04:41Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/eval-validation-windows",
+      "headRepositoryName": "ShiroKSH/agent-skills",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "stargazerCount": 76495
+      }
+    },
+    "https://github.com/Zinidia/Pelinstaller/pull/22": {
+      "title": "Fix installer flow checks",
+      "url": "https://github.com/Zinidia/Pelinstaller/pull/22",
+      "mergedAt": "2026-07-09T20:51:03Z",
+      "createdAt": "2026-07-09T15:03:04Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix-installer-flow",
+      "headRepositoryName": "ShiroKSH/Pelinstaller",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Zinidia/Pelinstaller",
+        "url": "https://github.com/Zinidia/Pelinstaller",
+        "stargazerCount": 91
+      }
+    },
+    "https://github.com/Anerson-Auf/glua-interface-interpretator/pull/5": {
+      "title": "Добавить сборку релизов",
+      "url": "https://github.com/Anerson-Auf/glua-interface-interpretator/pull/5",
+      "mergedAt": "2026-07-09T18:24:35Z",
+      "createdAt": "2026-07-08T19:36:27Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "ci/release-builds",
+      "headRepositoryName": "ShiroKSH/glua-interface-interpretator",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Anerson-Auf/glua-interface-interpretator",
+        "url": "https://github.com/Anerson-Auf/glua-interface-interpretator",
+        "stargazerCount": 0
+      }
+    },
+    "https://github.com/Anerson-Auf/glua-interface-interpretator/pull/4": {
+      "title": "Починить черный фон в левом сайдбаре",
+      "url": "https://github.com/Anerson-Auf/glua-interface-interpretator/pull/4",
+      "mergedAt": "2026-07-09T18:23:55Z",
+      "createdAt": "2026-07-08T19:31:21Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/sidebar-layout-background",
+      "headRepositoryName": "ShiroKSH/glua-interface-interpretator",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Anerson-Auf/glua-interface-interpretator",
+        "url": "https://github.com/Anerson-Auf/glua-interface-interpretator",
+        "stargazerCount": 0
+      }
+    },
+    "https://github.com/Anerson-Auf/glua-interface-interpretator/pull/3": {
+      "title": "Добавить скриншот в README",
+      "url": "https://github.com/Anerson-Auf/glua-interface-interpretator/pull/3",
+      "mergedAt": "2026-07-08T19:09:17Z",
+      "createdAt": "2026-07-08T19:07:17Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "docs/readme-screenshots",
+      "headRepositoryName": "ShiroKSH/glua-interface-interpretator",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Anerson-Auf/glua-interface-interpretator",
+        "url": "https://github.com/Anerson-Auf/glua-interface-interpretator",
+        "stargazerCount": 0
+      }
+    },
+    "https://github.com/Anerson-Auf/glua-interface-interpretator/pull/2": {
+      "title": "Добавить README на русском и английском",
+      "url": "https://github.com/Anerson-Auf/glua-interface-interpretator/pull/2",
+      "mergedAt": "2026-07-08T19:02:09Z",
+      "createdAt": "2026-07-08T18:58:56Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/glua-codegen-export",
+      "headRepositoryName": "ShiroKSH/glua-interface-interpretator",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Anerson-Auf/glua-interface-interpretator",
+        "url": "https://github.com/Anerson-Auf/glua-interface-interpretator",
+        "stargazerCount": 0
+      }
+    },
+    "https://github.com/777genius/voice-to-text/pull/11": {
+      "title": "Guard external auth URL opens",
+      "url": "https://github.com/777genius/voice-to-text/pull/11",
+      "mergedAt": "2026-07-09T15:54:04Z",
+      "createdAt": "2026-07-08T18:08:32Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/oauth-url-opener-guard",
+      "headRepositoryName": "ShiroKSH/voice-to-text",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "777genius/voice-to-text",
+        "url": "https://github.com/777genius/voice-to-text",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/Facepunch/garrysmod/pull/2498": {
+      "title": "Fix a few runtime edge cases",
+      "url": "https://github.com/Facepunch/garrysmod/pull/2498",
+      "mergedAt": "2026-07-09T18:20:40Z",
+      "createdAt": "2026-07-08T18:04:57Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/runtime-edge-cases",
+      "headRepositoryName": "ShiroKSH/garrysmod",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Facepunch/garrysmod",
+        "url": "https://github.com/Facepunch/garrysmod",
+        "stargazerCount": 1286
+      }
+    },
+    "https://github.com/777genius/voice-to-text/pull/10": {
+      "title": "Fix settings IPC persistence edge cases",
+      "url": "https://github.com/777genius/voice-to-text/pull/10",
+      "mergedAt": "2026-07-09T15:53:18Z",
+      "createdAt": "2026-07-08T18:03:40Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/settings-ipc-state-sync",
+      "headRepositoryName": "ShiroKSH/voice-to-text",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "777genius/voice-to-text",
+        "url": "https://github.com/777genius/voice-to-text",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/MadsLorentzen/ai-job-search/pull/76": {
+      "title": "Respect zero LinkedIn result limits",
+      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/76",
+      "mergedAt": "2026-07-08T18:57:41Z",
+      "createdAt": "2026-07-08T16:57:21Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix-linkedin-limit-zero",
+      "headRepositoryName": "ShiroKSH/ai-job-search",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "MadsLorentzen/ai-job-search",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "stargazerCount": 20296
+      }
+    },
+    "https://github.com/MadsLorentzen/ai-job-search/pull/75": {
+      "title": "Fix salary tool edge cases",
+      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/75",
+      "mergedAt": "2026-07-08T19:12:36Z",
+      "createdAt": "2026-07-08T16:56:43Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix-salary-tool-edge-cases",
+      "headRepositoryName": "ShiroKSH/ai-job-search",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "MadsLorentzen/ai-job-search",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "stargazerCount": 20296
+      }
+    },
+    "https://github.com/backnotprop/plannotator/pull/1021": {
+      "title": "Fix Windows install and review edge cases",
+      "url": "https://github.com/backnotprop/plannotator/pull/1021",
+      "mergedAt": "2026-07-10T12:54:20Z",
+      "createdAt": "2026-07-08T16:53:03Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "agent/windows-installer-pi-amp-fixes",
+      "headRepositoryName": "ShiroKSH/plannotator",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "backnotprop/plannotator",
+        "url": "https://github.com/backnotprop/plannotator",
+        "stargazerCount": 6937
+      }
+    },
+    "https://github.com/777genius/agent-teams-ai/pull/244": {
+      "title": "Fix MCP metadata forwarding and workspace config",
+      "url": "https://github.com/777genius/agent-teams-ai/pull/244",
+      "mergedAt": "2026-07-08T21:26:44Z",
+      "createdAt": "2026-07-08T16:38:30Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/mcp-launch-metadata",
+      "headRepositoryName": "ShiroKSH/agent-teams-ai",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "777genius/agent-teams-ai",
+        "url": "https://github.com/777genius/agent-teams-ai",
+        "stargazerCount": 1564
+      }
+    },
+    "https://github.com/wisp-gg/go-gamequery/pull/2": {
+      "title": "fix: avoid UDP receive timeout",
+      "url": "https://github.com/wisp-gg/go-gamequery/pull/2",
+      "mergedAt": "2026-07-08T23:02:09Z",
+      "createdAt": "2026-07-06T12:35:41Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix-udp-receive-timeout",
+      "headRepositoryName": "ShiroKSH/go-gamequery",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "wisp-gg/go-gamequery",
+        "url": "https://github.com/wisp-gg/go-gamequery",
+        "stargazerCount": 11
+      }
+    },
+    "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/31": {
+      "title": "fix: масштабные фиксы стабильности",
+      "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/31",
+      "mergedAt": "2026-07-02T14:52:43Z",
+      "createdAt": "2026-07-01T17:19:09Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/stability-fixes",
+      "headRepositoryName": "ShiroKSH/autonomous-hl2rpg",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "SchwarzKruppzo/autonomous-hl2rpg",
+        "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/30": {
+      "title": "fix: корректно чистить список persistent corpses",
+      "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/30",
+      "mergedAt": "2026-07-01T11:12:43Z",
+      "createdAt": "2026-07-01T10:55:36Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/persistent-corpses-cleanup-index",
+      "headRepositoryName": "ShiroKSH/autonomous-hl2rpg",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "SchwarzKruppzo/autonomous-hl2rpg",
+        "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/29": {
+      "title": "fix: удалять пересозданный clientside prop по правильному индексу",
+      "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/29",
+      "mergedAt": "2026-07-01T11:15:33Z",
+      "createdAt": "2026-07-01T10:54:22Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/clientside-prop-recreate-index",
+      "headRepositoryName": "ShiroKSH/autonomous-hl2rpg",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "SchwarzKruppzo/autonomous-hl2rpg",
+        "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/28": {
+      "title": "fix: искать предмет InventoryAction по числовому instance id",
+      "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/28",
+      "mergedAt": "2026-07-01T11:09:58Z",
+      "createdAt": "2026-07-01T10:50:49Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/inventory-action-instance-id",
+      "headRepositoryName": "ShiroKSH/autonomous-hl2rpg",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "SchwarzKruppzo/autonomous-hl2rpg",
+        "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/27": {
+      "title": "fix: исправить расход фильтра в радиационной зоне",
+      "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/27",
+      "mergedAt": "2026-07-01T11:11:03Z",
+      "createdAt": "2026-07-01T10:49:11Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/radiation-filter-rate",
+      "headRepositoryName": "ShiroKSH/autonomous-hl2rpg",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "SchwarzKruppzo/autonomous-hl2rpg",
+        "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/26": {
+      "title": "fix: ограничить минимальное время применения медицины",
+      "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/26",
+      "mergedAt": "2026-07-01T11:32:52Z",
+      "createdAt": "2026-07-01T10:44:46Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/medical-use-time",
+      "headRepositoryName": "ShiroKSH/autonomous-hl2rpg",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "SchwarzKruppzo/autonomous-hl2rpg",
+        "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/32": {
+      "title": "feat: complete omnitool controls",
+      "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg/pull/32",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T23:12:29Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "feature/omnitool-rework",
+      "headRepositoryName": "ShiroKSH/autonomous-hl2rpg",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "SchwarzKruppzo/autonomous-hl2rpg",
+        "url": "https://github.com/SchwarzKruppzo/autonomous-hl2rpg",
+        "stargazerCount": 4
+      }
+    },
+    "https://github.com/bholmesdev/hubble.md/pull/158": {
+      "title": "fix: harden editor and sync edge cases",
+      "url": "https://github.com/bholmesdev/hubble.md/pull/158",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T21:39:55Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "agent/harden-editor-sync-edge-cases",
+      "headRepositoryName": "ShiroKSH/hubble.md",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "bholmesdev/hubble.md",
+        "url": "https://github.com/bholmesdev/hubble.md",
+        "stargazerCount": 674
+      }
+    },
+    "https://github.com/wonderwhy-er/DesktopCommanderMCP/pull/551": {
+      "title": "fix: harden process tools and validation",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP/pull/551",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T21:36:33Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "agent/desktop-commander-hardening",
+      "headRepositoryName": "ShiroKSH/DesktopCommanderMCP",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "wonderwhy-er/DesktopCommanderMCP",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "stargazerCount": 6840
+      }
+    },
+    "https://github.com/Facepunch/garrysmod/pull/2502": {
+      "title": "Fix model metadata refresh query",
+      "url": "https://github.com/Facepunch/garrysmod/pull/2502",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T21:31:03Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/model-database-refresh",
+      "headRepositoryName": "ShiroKSH/garrysmod",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Facepunch/garrysmod",
+        "url": "https://github.com/Facepunch/garrysmod",
+        "stargazerCount": 1286
+      }
+    },
+    "https://github.com/ton-org/blueprint/pull/359": {
+      "title": "fix: harden blueprint tooling flows",
+      "url": "https://github.com/ton-org/blueprint/pull/359",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T21:27:13Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "agent/blueprint-pr",
+      "headRepositoryName": "ShiroKSH/blueprint",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "ton-org/blueprint",
+        "url": "https://github.com/ton-org/blueprint",
+        "stargazerCount": 652
+      }
+    },
+    "https://github.com/getpelican/pelican/pull/3611": {
+      "title": "Fix output path boundary validation",
+      "url": "https://github.com/getpelican/pelican/pull/3611",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T21:21:59Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "agent/fix-output-path-boundary",
+      "headRepositoryName": "ShiroKSH/pelican",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "getpelican/pelican",
+        "url": "https://github.com/getpelican/pelican",
+        "stargazerCount": 13331
+      }
+    },
+    "https://github.com/prometheus/prometheus/pull/19149": {
+      "title": "scrape: stop manager on closed target-set channel",
+      "url": "https://github.com/prometheus/prometheus/pull/19149",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T20:45:15Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/scrape-manager-closed-sync-channel",
+      "headRepositoryName": "ShiroKSH/prometheus",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "prometheus/prometheus",
+        "url": "https://github.com/prometheus/prometheus",
+        "stargazerCount": 65118
+      }
+    },
+    "https://github.com/Facepunch/garrysmod/pull/2501": {
+      "title": "Fix TTT state and report chunking",
+      "url": "https://github.com/Facepunch/garrysmod/pull/2501",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T19:44:57Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/ttt-state-and-reporting",
+      "headRepositoryName": "ShiroKSH/garrysmod",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Facepunch/garrysmod",
+        "url": "https://github.com/Facepunch/garrysmod",
+        "stargazerCount": 1286
+      }
+    },
+    "https://github.com/Facepunch/garrysmod/pull/2500": {
+      "title": "Fix several base and sandbox logic errors",
+      "url": "https://github.com/Facepunch/garrysmod/pull/2500",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T19:40:25Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/save-and-runtime-bugs",
+      "headRepositoryName": "ShiroKSH/garrysmod",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Facepunch/garrysmod",
+        "url": "https://github.com/Facepunch/garrysmod",
+        "stargazerCount": 1286
+      }
+    },
+    "https://github.com/wiremod/wire/pull/3651": {
+      "title": "Add AI-assisted contribution rules",
+      "url": "https://github.com/wiremod/wire/pull/3651",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T18:44:59Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "docs/ai-contribution-rules",
+      "headRepositoryName": "ShiroKSH/wire",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "wiremod/wire",
+        "url": "https://github.com/wiremod/wire",
+        "stargazerCount": 593
+      }
+    },
+    "https://github.com/DeusData/codebase-memory-mcp/pull/985": {
+      "title": "fix(graph-ui): clear ADR content on delete",
+      "url": "https://github.com/DeusData/codebase-memory-mcp/pull/985",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T18:32:38Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "agent/fix-adr-delete",
+      "headRepositoryName": "ShiroKSH/codebase-memory-mcp",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "DeusData/codebase-memory-mcp",
+        "url": "https://github.com/DeusData/codebase-memory-mcp",
+        "stargazerCount": 29477
+      }
+    },
+    "https://github.com/bradautomates/claude-video/pull/63": {
+      "title": "Fix watch runtime edge cases",
+      "url": "https://github.com/bradautomates/claude-video/pull/63",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T18:18:35Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "agent/fix-watch-runtime-edge-cases",
+      "headRepositoryName": "ShiroKSH/claude-video",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "bradautomates/claude-video",
+        "url": "https://github.com/bradautomates/claude-video",
+        "stargazerCount": 7003
+      }
+    },
+    "https://github.com/kyutai-labs/pocket-tts/pull/210": {
+      "title": "Fix audio and state edge cases",
+      "url": "https://github.com/kyutai-labs/pocket-tts/pull/210",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T18:12:00Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/wav-generation-edge-cases",
+      "headRepositoryName": "ShiroKSH/pocket-tts",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "kyutai-labs/pocket-tts",
+        "url": "https://github.com/kyutai-labs/pocket-tts",
+        "stargazerCount": 7203
+      }
+    },
+    "https://github.com/steipete/agent-scripts/pull/28": {
+      "title": "fix: harden browser tools start and console flag",
+      "url": "https://github.com/steipete/agent-scripts/pull/28",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T18:09:33Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/browser-tools-start-console",
+      "headRepositoryName": "ShiroKSH/agent-scripts",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "steipete/agent-scripts",
+        "url": "https://github.com/steipete/agent-scripts",
+        "stargazerCount": 6261
+      }
+    },
+    "https://github.com/777genius/infinity-context/pull/3": {
+      "title": "Fix export permissions and Windows CLI config",
+      "url": "https://github.com/777genius/infinity-context/pull/3",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T16:20:43Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/windows-cli-export-auth",
+      "headRepositoryName": "ShiroKSH/infinity-context",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "777genius/infinity-context",
+        "url": "https://github.com/777genius/infinity-context",
+        "stargazerCount": 0
+      }
+    },
+    "https://github.com/wiremod/wire/pull/3649": {
+      "title": "Fix small Wire runtime edge cases",
+      "url": "https://github.com/wiremod/wire/pull/3649",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T15:49:46Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/reviewed-wire-runtime-fixes",
+      "headRepositoryName": "ShiroKSH/wire",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "wiremod/wire",
+        "url": "https://github.com/wiremod/wire",
+        "stargazerCount": 593
+      }
+    },
+    "https://github.com/imthenachoman/How-To-Secure-A-Linux-Server/pull/135": {
+      "title": "docs: fix hardening guide command examples",
+      "url": "https://github.com/imthenachoman/How-To-Secure-A-Linux-Server/pull/135",
+      "mergedAt": null,
+      "createdAt": "2026-07-09T15:05:53Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/hardening-guide-commands",
+      "headRepositoryName": "ShiroKSH/How-To-Secure-A-Linux-Server",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "imthenachoman/How-To-Secure-A-Linux-Server",
+        "url": "https://github.com/imthenachoman/How-To-Secure-A-Linux-Server",
+        "stargazerCount": 29348
+      }
+    },
+    "https://github.com/MechanicalMind/murder/pull/100": {
+      "title": "Fix runtime edge cases in Murder",
+      "url": "https://github.com/MechanicalMind/murder/pull/100",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T22:41:17Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/murder-runtime-guards",
+      "headRepositoryName": "ShiroKSH/murder",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "MechanicalMind/murder",
+        "url": "https://github.com/MechanicalMind/murder",
+        "stargazerCount": 66
+      }
+    },
+    "https://github.com/amnezia-vpn/amnezia-client/pull/2820": {
+      "title": "Fix config import parsing and VPN route edge cases",
+      "url": "https://github.com/amnezia-vpn/amnezia-client/pull/2820",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T22:30:55Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/import-route-edge-cases",
+      "headRepositoryName": "ShiroKSH/amnezia-client",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "amnezia-vpn/amnezia-client",
+        "url": "https://github.com/amnezia-vpn/amnezia-client",
+        "stargazerCount": 12863
+      }
+    },
+    "https://github.com/huxingyi/autoremesher/pull/37": {
+      "title": "Harden OBJ loading and headless remeshing",
+      "url": "https://github.com/huxingyi/autoremesher/pull/37",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T22:11:18Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "agent/harden-remesh-cli",
+      "headRepositoryName": "ShiroKSH/autoremesher",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "huxingyi/autoremesher",
+        "url": "https://github.com/huxingyi/autoremesher",
+        "stargazerCount": 2514
+      }
+    },
+    "https://github.com/TeamUlysses/ulx/pull/237": {
+      "title": "fix: guard crash-prone runtime paths",
+      "url": "https://github.com/TeamUlysses/ulx/pull/237",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T22:08:59Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/runtime-crash-guards",
+      "headRepositoryName": "ShiroKSH/ulx",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "TeamUlysses/ulx",
+        "url": "https://github.com/TeamUlysses/ulx",
+        "stargazerCount": 188
+      }
+    },
+    "https://github.com/TeamUlysses/ulx/pull/236": {
+      "title": "fix: validate filtered vote responses",
+      "url": "https://github.com/TeamUlysses/ulx/pull/236",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T22:07:51Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/vote-approval-validation",
+      "headRepositoryName": "ShiroKSH/ulx",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "TeamUlysses/ulx",
+        "url": "https://github.com/TeamUlysses/ulx",
+        "stargazerCount": 188
+      }
+    },
+    "https://github.com/Facepunch/sbox-public/pull/11412": {
+      "title": "Fix Panel.MoveAfterSibling ordering",
+      "url": "https://github.com/Facepunch/sbox-public/pull/11412",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T21:45:04Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/panel-move-after-sibling",
+      "headRepositoryName": "ShiroKSH/sbox-public",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "Facepunch/sbox-public",
+        "url": "https://github.com/Facepunch/sbox-public",
+        "stargazerCount": 6352
+      }
+    },
+    "https://github.com/prisma/prisma/pull/29703": {
+      "title": "Fix source slice and schema loader edge cases",
+      "url": "https://github.com/prisma/prisma/pull/29703",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T19:59:54Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/source-slice-schema-loader-edge-cases",
+      "headRepositoryName": "ShiroKSH/prisma",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "prisma/prisma",
+        "url": "https://github.com/prisma/prisma",
+        "stargazerCount": 47081
+      }
+    },
+    "https://github.com/FPtje/DarkRP/pull/3307": {
+      "title": "Guard tip jar and client stale state",
+      "url": "https://github.com/FPtje/DarkRP/pull/3307",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T18:06:23Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/tipjar-client-guards",
+      "headRepositoryName": "ShiroKSH/DarkRP",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "FPtje/DarkRP",
+        "url": "https://github.com/FPtje/DarkRP",
+        "stargazerCount": 516
+      }
+    },
+    "https://github.com/FPtje/DarkRP/pull/3306": {
+      "title": "Guard spawned entity failure paths",
+      "url": "https://github.com/FPtje/DarkRP/pull/3306",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T18:05:56Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/spawned-entity-guards",
+      "headRepositoryName": "ShiroKSH/DarkRP",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "FPtje/DarkRP",
+        "url": "https://github.com/FPtje/DarkRP",
+        "stargazerCount": 516
+      }
+    },
+    "https://github.com/FPtje/DarkRP/pull/3305": {
+      "title": "Guard stale FAdmin action targets",
+      "url": "https://github.com/FPtje/DarkRP/pull/3305",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T18:05:27Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/fadmin-stale-actions",
+      "headRepositoryName": "ShiroKSH/DarkRP",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "FPtje/DarkRP",
+        "url": "https://github.com/FPtje/DarkRP",
+        "stargazerCount": 516
+      }
+    },
+    "https://github.com/FPtje/DarkRP/pull/3304": {
+      "title": "Fix vote cleanup edge cases",
+      "url": "https://github.com/FPtje/DarkRP/pull/3304",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T18:04:55Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/vote-cleanup",
+      "headRepositoryName": "ShiroKSH/DarkRP",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "FPtje/DarkRP",
+        "url": "https://github.com/FPtje/DarkRP",
+        "stargazerCount": 516
+      }
+    },
+    "https://github.com/RaphaelIT7/gmod-holylib/pull/187": {
+      "title": "Fix runtime guard paths",
+      "url": "https://github.com/RaphaelIT7/gmod-holylib/pull/187",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T17:43:08Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/runtime-guard-cleanups",
+      "headRepositoryName": "ShiroKSH/gmod-holylib",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "RaphaelIT7/gmod-holylib",
+        "url": "https://github.com/RaphaelIT7/gmod-holylib",
+        "stargazerCount": 158
+      }
+    },
+    "https://github.com/NebulousCloud/helix/pull/533": {
+      "title": "Fix runtime edge cases",
+      "url": "https://github.com/NebulousCloud/helix/pull/533",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T17:24:04Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/runtime-edge-cases",
+      "headRepositoryName": "ShiroKSH/helix",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "NebulousCloud/helix",
+        "url": "https://github.com/NebulousCloud/helix",
+        "stargazerCount": 201
+      }
+    },
+    "https://github.com/CFC-Servers/GLuaTest/pull/113": {
+      "title": "Harden runner edge cases",
+      "url": "https://github.com/CFC-Servers/GLuaTest/pull/113",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T16:58:51Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/runner-edge-cases",
+      "headRepositoryName": "ShiroKSH/GLuaTest",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "CFC-Servers/GLuaTest",
+        "url": "https://github.com/CFC-Servers/GLuaTest",
+        "stargazerCount": 83
+      }
+    },
+    "https://github.com/wiremod/advdupe2/pull/544": {
+      "title": "Guard malformed dupes and stale ghosts",
+      "url": "https://github.com/wiremod/advdupe2/pull/544",
+      "mergedAt": null,
+      "createdAt": "2026-07-08T16:52:48Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/ghost-codec-guards",
+      "headRepositoryName": "ShiroKSH/advdupe2",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "wiremod/advdupe2",
+        "url": "https://github.com/wiremod/advdupe2",
+        "stargazerCount": 111
+      }
+    },
+    "https://github.com/WilliamVenner/gmod-rs/pull/16": {
+      "title": "Fix small Lua edge cases",
+      "url": "https://github.com/WilliamVenner/gmod-rs/pull/16",
+      "mergedAt": null,
+      "createdAt": "2026-07-07T01:36:17Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix-lua-edge-cases",
+      "headRepositoryName": "ShiroKSH/gmod-rs",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "WilliamVenner/gmod-rs",
+        "url": "https://github.com/WilliamVenner/gmod-rs",
+        "stargazerCount": 77
+      }
+    },
+    "https://github.com/WilliamVenner/gmpublisher/pull/351": {
+      "title": "Fix a few obvious edge cases",
+      "url": "https://github.com/WilliamVenner/gmpublisher/pull/351",
+      "mergedAt": null,
+      "createdAt": "2026-07-07T01:34:47Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "obvious-edge-case-fixes",
+      "headRepositoryName": "ShiroKSH/gmpublisher",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "WilliamVenner/gmpublisher",
+        "url": "https://github.com/WilliamVenner/gmpublisher",
+        "stargazerCount": 1184
+      }
+    },
+    "https://github.com/pterodactyl/panel/pull/5670": {
+      "title": "Fix backup restore activity event names",
+      "url": "https://github.com/pterodactyl/panel/pull/5670",
+      "mergedAt": null,
+      "createdAt": "2026-06-30T14:53:37Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix-backup-restore-failed-event",
+      "headRepositoryName": "ShiroKSH/panel",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "pterodactyl/panel",
+        "url": "https://github.com/pterodactyl/panel",
+        "stargazerCount": 9010
+      }
+    },
+    "https://github.com/STEAMBALANCE/booster-plugin-template/pull/1": {
+      "title": "fix: harden template install and build",
+      "url": "https://github.com/STEAMBALANCE/booster-plugin-template/pull/1",
+      "mergedAt": null,
+      "createdAt": "2026-06-29T10:23:43Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/template-ci-build",
+      "headRepositoryName": "ShiroKSH/booster-plugin-template",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "STEAMBALANCE/booster-plugin-template",
+        "url": "https://github.com/STEAMBALANCE/booster-plugin-template",
+        "stargazerCount": 3
+      }
+    },
+    "https://github.com/STEAMBALANCE/booster-plugins/pull/3": {
+      "title": "fix: harden checkout popup endpoints",
+      "url": "https://github.com/STEAMBALANCE/booster-plugins/pull/3",
+      "mergedAt": null,
+      "createdAt": "2026-06-29T10:23:43Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/checkout-popup-endpoints",
+      "headRepositoryName": "ShiroKSH/booster-plugins",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "STEAMBALANCE/booster-plugins",
+        "url": "https://github.com/STEAMBALANCE/booster-plugins",
+        "stargazerCount": 22
+      }
+    },
+    "https://github.com/STEAMBALANCE/booster-framework/pull/6": {
+      "title": "fix: harden plugin capability boundaries",
+      "url": "https://github.com/STEAMBALANCE/booster-framework/pull/6",
+      "mergedAt": null,
+      "createdAt": "2026-06-29T10:23:43Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix/plugin-capability-boundaries",
+      "headRepositoryName": "ShiroKSH/booster-framework",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "STEAMBALANCE/booster-framework",
+        "url": "https://github.com/STEAMBALANCE/booster-framework",
+        "stargazerCount": 8
+      }
+    },
+    "https://github.com/pterodactyl/wings/pull/332": {
+      "title": "Return backup notification errors",
+      "url": "https://github.com/pterodactyl/wings/pull/332",
+      "mergedAt": null,
+      "createdAt": "2026-06-29T10:13:45Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix-backup-notify-error",
+      "headRepositoryName": "ShiroKSH/wings",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "pterodactyl/wings",
+        "url": "https://github.com/pterodactyl/wings",
+        "stargazerCount": 1019
+      }
+    },
+    "https://github.com/pterodactyl/wings/pull/331": {
+      "title": "Fix ISPN localhost binding filtering",
+      "url": "https://github.com/pterodactyl/wings/pull/331",
+      "mergedAt": null,
+      "createdAt": "2026-06-29T10:10:42Z",
+      "baseRepositoryPrivate": false,
+      "headRefName": "fix-ispn-local-bindings",
+      "headRepositoryName": "ShiroKSH/wings",
+      "headRepositoryPrivate": false,
+      "repository": {
+        "nameWithOwner": "pterodactyl/wings",
+        "url": "https://github.com/pterodactyl/wings",
+        "stargazerCount": 1019
+      }
+    }
+  }
+}
