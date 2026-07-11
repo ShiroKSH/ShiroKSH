@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Unique merged public PR branches | **22** |
-| Unique open public PR branches | **40** |
-| Biggest repo with my merged PR | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) - 76k stars |
+| Unique merged public PR branches | **31** |
+| Unique open public PR branches | **46** |
+| Biggest repo with my merged PR | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) - 77k stars |
 | Best star-target PR | [fix: harden eval and command validation](https://github.com/addyosmani/agent-skills/pull/372) |
-| Latest merged PR | [Fix Windows install and review edge cases](https://github.com/backnotprop/plannotator/pull/1021) - 2026-07-10 |
+| Latest merged PR | [fix: harden browser tools start and console flag](https://github.com/steipete/agent-scripts/pull/28) - 2026-07-11 |
 
 <sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-11.</sub>
 <!-- PR-STATS:END -->
@@ -37,11 +37,11 @@
 <!-- LANG-STATS:START -->
 | language | share |
 | --- | --- |
-| JavaScript | `#####-----` 47.7% |
-| TypeScript | `###-------` 27.6% |
-| Lua | `##--------` 17.2% |
-| Python | `#---------` 5.4% |
-| C++ | `#---------` 2.0% |
+| Python | `####------` 35.1% |
+| JavaScript | `###-------` 32.8% |
+| TypeScript | `##--------` 19.0% |
+| Lua | `#---------` 11.8% |
+| C++ | `#---------` 1.4% |
 
 <sub>Auto-parsed from owned public repositories. Last updated 2026-07-11.</sub>
 <!-- LANG-STATS:END -->
