@@ -29,7 +29,7 @@
 | Best star-target PR | [fix: harden eval and command validation](https://github.com/addyosmani/agent-skills/pull/372) |
 | Latest merged PR | [Fix Windows install and review edge cases](https://github.com/backnotprop/plannotator/pull/1021) - 2026-07-10 |
 
-<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-10.</sub>
+<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-11.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -43,7 +43,7 @@
 | Python | `#---------` 5.4% |
 | C++ | `#---------` 2.0% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-10.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-11.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
