@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Unique merged public PR branches | **31** |
-| Unique open public PR branches | **50** |
-| Biggest repo with my merged PR | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) - 77k stars |
-| Best star-target PR | [fix: harden eval and command validation](https://github.com/addyosmani/agent-skills/pull/372) |
-| Latest merged PR | [fix: harden browser tools start and console flag](https://github.com/steipete/agent-scripts/pull/28) - 2026-07-11 |
+| Unique merged public PR branches | **36** |
+| Unique open public PR branches | **43** |
+| Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
+| Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
+| Latest merged PR | [fix: prevent translators from setting approval status](https://github.com/MohmmedAshraf/laravel-translations/pull/184) - 2026-07-12 |
 
 <sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-12.</sub>
 <!-- PR-STATS:END -->
@@ -37,11 +37,11 @@
 <!-- LANG-STATS:START -->
 | language | share |
 | --- | --- |
-| Python | `####------` 35.1% |
-| JavaScript | `###-------` 32.8% |
-| TypeScript | `##--------` 19.0% |
-| Lua | `#---------` 11.8% |
-| C++ | `#---------` 1.4% |
+| Python | `####------` 37.7% |
+| JavaScript | `###-------` 31.4% |
+| TypeScript | `##--------` 18.2% |
+| Lua | `#---------` 11.3% |
+| C++ | `#---------` 1.3% |
 
 <sub>Auto-parsed from owned public repositories. Last updated 2026-07-12.</sub>
 <!-- LANG-STATS:END -->
