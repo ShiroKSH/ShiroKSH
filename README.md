@@ -24,12 +24,12 @@
 | signal | value |
 | --- | --- |
 | Unique merged public PR branches | **31** |
-| Unique open public PR branches | **46** |
+| Unique open public PR branches | **50** |
 | Biggest repo with my merged PR | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) - 77k stars |
 | Best star-target PR | [fix: harden eval and command validation](https://github.com/addyosmani/agent-skills/pull/372) |
 | Latest merged PR | [fix: harden browser tools start and console flag](https://github.com/steipete/agent-scripts/pull/28) - 2026-07-11 |
 
-<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-11.</sub>
+<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-12.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -43,7 +43,7 @@
 | Lua | `#---------` 11.8% |
 | C++ | `#---------` 1.4% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-11.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-12.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
