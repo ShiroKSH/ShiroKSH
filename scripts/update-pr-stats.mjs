@@ -235,7 +235,7 @@ async function searchPullRequestsGraphql(searchQuery, maxPages = 10) {
 }
 
 async function searchPullRequests(searchQuery) {
-  if (!profileStatsToken && process.env.GITHUB_ACTIONS === "true") {
+  if (!token && process.env.GITHUB_ACTIONS === "true") {
     const wantsMerged = searchQuery.includes("is:merged");
     const nodes = [...pullRequestCache.values()].filter((node) => wantsMerged ? Boolean(node.mergedAt) : !node.mergedAt);
     return { count: nodes.length, nodes };
