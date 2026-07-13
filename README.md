@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Unique merged public PR branches | **37** |
-| Unique open public PR branches | **44** |
+| Unique merged public PR branches | **40** |
+| Unique open public PR branches | **41** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [Fix runtime edge cases](https://github.com/NebulousCloud/helix/pull/533) - 2026-07-12 |
+| Latest merged PR | [fix(site): 修正通用测验“交付”题答案索引](https://github.com/fancyboi999/ai-engineering-from-scratch-zh/pull/58) - 2026-07-13 |
 
 <sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-13.</sub>
 <!-- PR-STATS:END -->
