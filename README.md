@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Unique merged public PR branches | **57** |
-| Unique open public PR branches | **74** |
+| Unique merged public PR branches | **61** |
+| Unique open public PR branches | **71** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: confine category migration paths](https://github.com/majiayu000/claude-skill-registry-core/pull/250) - 2026-07-14 |
+| Latest merged PR | [fix: include IR overrides in autotune cache keys](https://github.com/triton-lang/triton/pull/10880) - 2026-07-14 |
 
 <sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-14.</sub>
 <!-- PR-STATS:END -->
