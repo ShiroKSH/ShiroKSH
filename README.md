@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Unique merged public PR branches | **67** |
-| Unique open public PR branches | **93** |
+| Unique merged public PR branches | **68** |
+| Unique open public PR branches | **97** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(frontend): preserve remote markdown export links](https://github.com/kenn-io/agentsview/pull/1142) - 2026-07-14 |
+| Latest merged PR | [fix: preserve binary HTTP body data](https://github.com/yusukebe/ax/pull/30) - 2026-07-14 |
 
 <sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-14.</sub>
 <!-- PR-STATS:END -->
