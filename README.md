@@ -24,7 +24,7 @@
 | signal | value |
 | --- | --- |
 | Unique merged public PR branches | **67** |
-| Unique open public PR branches | **85** |
+| Unique open public PR branches | **93** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
 | Latest merged PR | [fix(frontend): preserve remote markdown export links](https://github.com/kenn-io/agentsview/pull/1142) - 2026-07-14 |
