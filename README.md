@@ -24,7 +24,7 @@
 | signal | value |
 | --- | --- |
 | Unique merged public PR branches | **53** |
-| Unique open public PR branches | **66** |
+| Unique open public PR branches | **67** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
 | Latest merged PR | [Fix WaitSema import-loop guard boundary](https://github.com/par274/sharpemu/pull/133) - 2026-07-14 |
