@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Unique merged public PR branches | **48** |
-| Unique open public PR branches | **52** |
+| Unique merged public PR branches | **51** |
+| Unique open public PR branches | **48** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [Fix vote cleanup edge cases](https://github.com/FPtje/DarkRP/pull/3304) - 2026-07-13 |
+| Latest merged PR | [fix: harden validation and packaged CLI](https://github.com/tt-a1i/archify/pull/21) - 2026-07-14 |
 
 <sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-14.</sub>
 <!-- PR-STATS:END -->
