@@ -23,13 +23,13 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Unique merged public PR branches | **68** |
-| Unique open public PR branches | **97** |
+| Unique merged public PR branches | **70** |
+| Unique open public PR branches | **99** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: preserve binary HTTP body data](https://github.com/yusukebe/ax/pull/30) - 2026-07-14 |
+| Latest merged PR | [fix: process all files in GUI directory mode](https://github.com/DrewThomasson/ebook2audiobook/pull/2007) - 2026-07-15 |
 
-<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-14.</sub>
+<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated 2026-07-15.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -43,7 +43,7 @@
 | Lua | `#---------` 11.3% |
 | C++ | `#---------` 1.3% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-14.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-15.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
