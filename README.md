@@ -24,7 +24,7 @@
 | signal | value |
 | --- | --- |
 | Public repositories with merged PRs | **49** |
-| Public repositories with open PRs | **88** |
+| Public repositories with open PRs | **87** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
 | Latest merged PR | [fix(install): return failure exit codes](https://github.com/unslothai/unsloth/pull/7123) - 2026-07-15 |
