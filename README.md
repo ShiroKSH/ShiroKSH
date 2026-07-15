@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **46** |
-| Public repositories with open PRs | **89** |
+| Public repositories with merged PRs | **48** |
+| Public repositories with open PRs | **86** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: process all files in GUI directory mode](https://github.com/DrewThomasson/ebook2audiobook/pull/2007) - 2026-07-15 |
+| Latest merged PR | [fix(fs): propagate write errors](https://github.com/PerryTS/perry/pull/6415) - 2026-07-15 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-15.</sub>
 <!-- PR-STATS:END -->
