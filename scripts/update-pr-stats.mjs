@@ -244,9 +244,9 @@ async function searchPullRequests(searchQuery) {
   return searchPullRequestsGraphql(searchQuery);
 }
 
-function pullRequestBranchKey(node) {
-  if (node.headRepositoryName && node.headRefName && node.headRepositoryPrivate === false) {
-    return `branch:${node.headRepositoryName}:${node.headRefName}`;
+function pullRequestRepositoryKey(node) {
+  if (node.repository?.nameWithOwner) {
+    return `repository:${node.repository.nameWithOwner}`;
   }
 
   return `pr:${node.url}`;
@@ -265,11 +265,11 @@ function betterPullRequestRepresentative(left, right) {
   return rightTime > leftTime ? right : left;
 }
 
-function dedupePullRequestsByBranch(nodes) {
+function dedupePullRequestsByRepository(nodes) {
   const uniqueNodes = new Map();
 
   for (const node of nodes) {
-    const key = pullRequestBranchKey(node);
+    const key = pullRequestRepositoryKey(node);
     const current = uniqueNodes.get(key);
     uniqueNodes.set(key, current ? betterPullRequestRepresentative(current, node) : node);
   }
@@ -384,8 +384,8 @@ function renderStats({ merged, open }) {
   const lines = [
     `| signal | value |`,
     `| --- | --- |`,
-    `| Unique merged public PR branches | **${formatNumber(merged.count)}** |`,
-    `| Unique open public PR branches | **${formatNumber(open.count)}** |`,
+    `| Public repositories with merged PRs | **${formatNumber(merged.count)}** |`,
+    `| Public repositories with open PRs | **${formatNumber(open.count)}** |`,
   ];
 
   if (bestByStars) {
@@ -401,7 +401,7 @@ function renderStats({ merged, open }) {
     );
   }
 
-  lines.push("", `<sub>Auto-parsed from GitHub Search, deduped by public head branch. Last updated ${new Date().toISOString().slice(0, 10)}.</sub>`);
+  lines.push("", `<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated ${new Date().toISOString().slice(0, 10)}.</sub>`);
   return lines.join("\n");
 }
 
@@ -432,8 +432,8 @@ const [merged, open] = await Promise.all([
 
 merged.nodes = merged.nodes.filter((node) => node.baseRepositoryPrivate === false);
 open.nodes = open.nodes.filter((node) => node.baseRepositoryPrivate === false);
-merged.nodes = dedupePullRequestsByBranch(merged.nodes);
-open.nodes = dedupePullRequestsByBranch(open.nodes);
+merged.nodes = dedupePullRequestsByRepository(merged.nodes);
+open.nodes = dedupePullRequestsByRepository(open.nodes);
 merged.count = merged.nodes.length;
 open.count = open.nodes.length;
 
