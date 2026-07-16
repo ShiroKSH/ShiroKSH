@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **51** |
-| Public repositories with open PRs | **83** |
+| Public repositories with merged PRs | **53** |
+| Public repositories with open PRs | **80** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: prevent USB mount failure from formatting SD card](https://github.com/Jstudner/jcorp-nomad/pull/122) - 2026-07-16 |
+| Latest merged PR | [Fix negative marketing campaign durations](https://github.com/OpenRCT2/OpenRCT2/pull/26789) - 2026-07-16 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-16.</sub>
 <!-- PR-STATS:END -->
