@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **55** |
-| Public repositories with open PRs | **79** |
+| Public repositories with merged PRs | **56** |
+| Public repositories with open PRs | **78** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: retain incomplete JSONL tails](https://github.com/steipete/CodexBar/pull/2168) - 2026-07-16 |
+| Latest merged PR | [fix(electron): preserve falsy workflow outputs](https://github.com/nodetool-ai/nodetool/pull/4262) - 2026-07-17 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-17.</sub>
 <!-- PR-STATS:END -->
