@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **57** |
-| Public repositories with open PRs | **77** |
+| Public repositories with merged PRs | **58** |
+| Public repositories with open PRs | **75** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: resolve relative HyperFrames output paths](https://github.com/calesthio/OpenMontage/pull/374) - 2026-07-18 |
+| Latest merged PR | [fix: escape Windows Terminal path](https://github.com/Raphire/Win11Debloat/pull/702) - 2026-07-18 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-18.</sub>
 <!-- PR-STATS:END -->
