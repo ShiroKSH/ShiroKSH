@@ -23,13 +23,13 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **58** |
-| Public repositories with open PRs | **75** |
+| Public repositories with merged PRs | **60** |
+| Public repositories with open PRs | **72** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 383k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: escape Windows Terminal path](https://github.com/Raphire/Win11Debloat/pull/702) - 2026-07-18 |
+| Latest merged PR | [Fix small Wire runtime edge cases](https://github.com/wiremod/wire/pull/3649) - 2026-07-19 |
 
-<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-18.</sub>
+<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-19.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -43,7 +43,7 @@
 | Lua | `#---------` 11.3% |
 | C++ | `#---------` 1.3% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-18.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-19.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
