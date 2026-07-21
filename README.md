@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **60** |
-| Public repositories with open PRs | **69** |
+| Public repositories with merged PRs | **61** |
+| Public repositories with open PRs | **68** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 384k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: enforce GitLab path boundaries](https://github.com/zereight/gitlab-mcp/pull/598) - 2026-07-19 |
+| Latest merged PR | [🐛 Fixed incorrect audio durations after HTML import](https://github.com/TryGhost/Ghost/pull/29337) - 2026-07-21 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-21.</sub>
 <!-- PR-STATS:END -->
