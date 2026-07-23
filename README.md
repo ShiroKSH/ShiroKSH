@@ -29,7 +29,7 @@
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
 | Latest merged PR | [fix(client,schema-files-loader): fix source slice and schema loader edge cases](https://github.com/prisma/prisma/pull/29703) - 2026-07-22 |
 
-<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-22.</sub>
+<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-23.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -43,7 +43,7 @@
 | Lua | `#---------` 11.3% |
 | C++ | `#---------` 1.3% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-22.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-23.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
