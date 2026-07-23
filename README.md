@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **62** |
-| Public repositories with open PRs | **67** |
+| Public repositories with merged PRs | **63** |
+| Public repositories with open PRs | **66** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 384k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(client,schema-files-loader): fix source slice and schema loader edge cases](https://github.com/prisma/prisma/pull/29703) - 2026-07-22 |
+| Latest merged PR | [fix(profiles): restore legacy layout snapshots](https://github.com/stonerl/Thaw/pull/779) - 2026-07-23 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-23.</sub>
 <!-- PR-STATS:END -->
