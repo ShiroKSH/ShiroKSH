@@ -29,7 +29,7 @@
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
 | Latest merged PR | [fix(profiles): restore legacy layout snapshots](https://github.com/stonerl/Thaw/pull/779) - 2026-07-23 |
 
-<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-23.</sub>
+<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-24.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -43,7 +43,7 @@
 | Lua | `#---------` 11.3% |
 | C++ | `#---------` 1.3% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-23.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-24.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
