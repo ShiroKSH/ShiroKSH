@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **64** |
-| Public repositories with open PRs | **65** |
+| Public repositories with merged PRs | **65** |
+| Public repositories with open PRs | **63** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 384k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: quote vault path in environment export](https://github.com/breferrari/obsidian-mind/pull/145) - 2026-07-24 |
+| Latest merged PR | [fix(quiz): expose all quiz categories](https://github.com/FlorianBruniaux/claude-code-ultimate-guide/pull/62) - 2026-07-25 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-25.</sub>
 <!-- PR-STATS:END -->
