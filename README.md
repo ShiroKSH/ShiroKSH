@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **67** |
-| Public repositories with open PRs | **61** |
+| Public repositories with merged PRs | **70** |
+| Public repositories with open PRs | **84** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 384k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(server): validate synced message ownership](https://github.com/moeru-ai/airi/pull/2054) - 2026-07-26 |
+| Latest merged PR | [fix: preserve exporter data during refresh](https://github.com/fuadmefleh/Shared-Claude-Chats/pull/15) - 2026-07-29 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-29.</sub>
 <!-- PR-STATS:END -->
