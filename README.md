@@ -23,13 +23,13 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **70** |
-| Public repositories with open PRs | **84** |
-| Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 384k stars |
+| Public repositories with merged PRs | **74** |
+| Public repositories with open PRs | **81** |
+| Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: preserve exporter data during refresh](https://github.com/fuadmefleh/Shared-Claude-Chats/pull/15) - 2026-07-29 |
+| Latest merged PR | [fix: persist serve configuration safely](https://github.com/jundot/omlx/pull/2239) - 2026-07-30 |
 
-<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-29.</sub>
+<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-30.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -43,7 +43,7 @@
 | Lua | `#---------` 11.3% |
 | C++ | `#---------` 1.3% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-29.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-07-30.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
