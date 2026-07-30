@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **74** |
-| Public repositories with open PRs | **81** |
+| Public repositories with merged PRs | **75** |
+| Public repositories with open PRs | **79** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: persist serve configuration safely](https://github.com/jundot/omlx/pull/2239) - 2026-07-30 |
+| Latest merged PR | [fix(security): strip word joiners from extraction](https://github.com/virgiliojr94/book-to-skill/pull/85) - 2026-07-30 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-30.</sub>
 <!-- PR-STATS:END -->
