@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **76** |
+| Public repositories with merged PRs | **82** |
 | Public repositories with open PRs | **90** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: reject impossible model dates](https://github.com/anomalyco/models.dev/pull/3876) - 2026-07-31 |
+| Latest merged PR | [fix notebook style generation](https://github.com/StylishThemes/GitHub-Dark/pull/1388) - 2026-07-31 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-31.</sub>
 <!-- PR-STATS:END -->
