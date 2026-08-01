@@ -23,13 +23,13 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **82** |
-| Public repositories with open PRs | **90** |
+| Public repositories with merged PRs | **85** |
+| Public repositories with open PRs | **93** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix notebook style generation](https://github.com/StylishThemes/GitHub-Dark/pull/1388) - 2026-07-31 |
+| Latest merged PR | [fix(import): preserve QGIS source paths and group visibility](https://github.com/opengeos/GeoLibre/pull/1584) - 2026-07-31 |
 
-<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-07-31.</sub>
+<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-01.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -43,7 +43,7 @@
 | Lua | `#---------` 11.3% |
 | C++ | `#---------` 1.3% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-07-31.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-08-01.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
