@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **89** |
-| Public repositories with open PRs | **100** |
+| Public repositories with merged PRs | **93** |
+| Public repositories with open PRs | **132** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [FE-629: Fix HIR kernel compilation for conditional distributions](https://github.com/hashintel/hash/pull/9028) - 2026-08-01 |
+| Latest merged PR | [fix(grep): prevent GB18030 truncation goroutine leak](https://github.com/esengine/DeepSeek-Reasonix/pull/7147) - 2026-08-01 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-01.</sub>
 <!-- PR-STATS:END -->
