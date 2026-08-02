@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **107** |
-| Public repositories with open PRs | **120** |
+| Public repositories with merged PRs | **108** |
+| Public repositories with open PRs | **119** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(cli): validate resolved project configurations](https://github.com/AmanVarshney01/create-better-t-stack/pull/1131) - 2026-08-02 |
+| Latest merged PR | [Fix GFile BufRead past EOF](https://github.com/godot-rust/gdext/pull/1670) - 2026-08-02 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-02.</sub>
 <!-- PR-STATS:END -->
