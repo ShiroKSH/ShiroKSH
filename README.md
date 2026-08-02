@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **98** |
-| Public repositories with open PRs | **129** |
+| Public repositories with merged PRs | **107** |
+| Public repositories with open PRs | **120** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(artifacts): scope full previews to their thread](https://github.com/bytedance/deer-flow/pull/4634) - 2026-08-02 |
+| Latest merged PR | [fix(cli): validate resolved project configurations](https://github.com/AmanVarshney01/create-better-t-stack/pull/1131) - 2026-08-02 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-02.</sub>
 <!-- PR-STATS:END -->
