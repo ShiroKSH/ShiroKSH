@@ -23,13 +23,13 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **93** |
-| Public repositories with open PRs | **132** |
+| Public repositories with merged PRs | **98** |
+| Public repositories with open PRs | **129** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(grep): prevent GB18030 truncation goroutine leak](https://github.com/esengine/DeepSeek-Reasonix/pull/7147) - 2026-08-01 |
+| Latest merged PR | [fix(artifacts): scope full previews to their thread](https://github.com/bytedance/deer-flow/pull/4634) - 2026-08-02 |
 
-<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-01.</sub>
+<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-02.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -37,14 +37,14 @@
 <!-- LANG-STATS:START -->
 | language | share |
 | --- | --- |
-| Rust | `#####-----` 47.1% |
-| Python | `##--------` 18.8% |
-| JavaScript | `##--------` 15.5% |
-| TypeScript | `#---------` 9.0% |
-| Lua | `#---------` 5.6% |
-| Java | `#---------` 4.0% |
+| Rust | `#####-----` 53.9% |
+| Python | `#---------` 14.4% |
+| TypeScript | `#---------` 14.2% |
+| JavaScript | `#---------` 11.1% |
+| Lua | `#---------` 3.7% |
+| Java | `#---------` 2.7% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-08-01.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-08-02.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
