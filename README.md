@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **110** |
-| Public repositories with open PRs | **116** |
+| Public repositories with merged PRs | **115** |
+| Public repositories with open PRs | **111** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(images): send omitted image edit fields](https://github.com/sashabaranov/go-openai/pull/1113) - 2026-08-02 |
+| Latest merged PR | [Fix automatic update checks across month boundaries](https://github.com/kaikramer/keystore-explorer/pull/809) - 2026-08-03 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-03.</sub>
 <!-- PR-STATS:END -->
