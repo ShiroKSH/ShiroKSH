@@ -23,13 +23,13 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **115** |
-| Public repositories with open PRs | **111** |
+| Public repositories with merged PRs | **119** |
+| Public repositories with open PRs | **107** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [Fix automatic update checks across month boundaries](https://github.com/kaikramer/keystore-explorer/pull/809) - 2026-08-03 |
+| Latest merged PR | [fix(bitbucket): fallback for missing notification URLs](https://github.com/gitify-app/gitify/pull/3131) - 2026-08-03 |
 
-<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-03.</sub>
+<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-04.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -44,7 +44,7 @@
 | Lua | `#---------` 3.7% |
 | Java | `#---------` 2.7% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-08-03.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-08-04.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
