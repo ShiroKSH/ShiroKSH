@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **119** |
-| Public repositories with open PRs | **107** |
+| Public repositories with merged PRs | **121** |
+| Public repositories with open PRs | **105** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(bitbucket): fallback for missing notification URLs](https://github.com/gitify-app/gitify/pull/3131) - 2026-08-03 |
+| Latest merged PR | [fix(ollama): map output token limits](https://github.com/mozilla-ai/any-llm/pull/1213) - 2026-08-04 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-04.</sub>
 <!-- PR-STATS:END -->
