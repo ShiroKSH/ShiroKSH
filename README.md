@@ -23,13 +23,13 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **121** |
-| Public repositories with open PRs | **105** |
+| Public repositories with merged PRs | **122** |
+| Public repositories with open PRs | **103** |
 | Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix(ollama): map output token limits](https://github.com/mozilla-ai/any-llm/pull/1213) - 2026-08-04 |
+| Latest merged PR | [fix: enforce bulk task permissions](https://github.com/usekaneo/kaneo/pull/1462) - 2026-08-04 |
 
-<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-04.</sub>
+<sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-05.</sub>
 <!-- PR-STATS:END -->
 
 ## Top languages
@@ -44,7 +44,7 @@
 | Lua | `#---------` 3.7% |
 | Java | `#---------` 2.7% |
 
-<sub>Auto-parsed from owned public repositories. Last updated 2026-08-04.</sub>
+<sub>Auto-parsed from owned public repositories. Last updated 2026-08-05.</sub>
 <!-- LANG-STATS:END -->
 
 ## Field notes
