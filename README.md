@@ -23,11 +23,11 @@
 <!-- PR-STATS:START -->
 | signal | value |
 | --- | --- |
-| Public repositories with merged PRs | **122** |
-| Public repositories with open PRs | **102** |
-| Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 385k stars |
+| Public repositories with merged PRs | **124** |
+| Public repositories with open PRs | **100** |
+| Biggest repo with my merged PR | [openclaw/openclaw](https://github.com/openclaw/openclaw) - 386k stars |
 | Best star-target PR | [fix(gateway): keep channels stopped during shutdown and reload](https://github.com/openclaw/openclaw/pull/104811) |
-| Latest merged PR | [fix: enforce bulk task permissions](https://github.com/usekaneo/kaneo/pull/1462) - 2026-08-04 |
+| Latest merged PR | [fix(download): finalize completed range resumes](https://github.com/invoke-ai/InvokeAI/pull/9432) - 2026-08-08 |
 
 <sub>Auto-parsed from GitHub Search, one representative PR per public base repository. Last updated 2026-08-08.</sub>
 <!-- PR-STATS:END -->
